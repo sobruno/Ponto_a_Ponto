@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AppProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
   title: "Ponto a Ponto - Organizador Pessoal de Tarefas",
@@ -16,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="h-full antialiased">
-      <body className="min-h-full flex flex-col font-sans bg-[#121316] text-[#E0E2E7]">
-        {children}
+      <body className="min-h-full flex flex-col font-sans bg-[#141519] text-[#E0E2E7]">
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );
