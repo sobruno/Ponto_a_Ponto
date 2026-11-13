@@ -1,6 +1,8 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==========================================
+# Ponto a Ponto - .gitignore
+# ==========================================
 
-# dependencies
+# Dependências
 /node_modules
 /.pnp
 .pnp.*
@@ -10,32 +12,67 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Next.js & Builds
 /.next/
 /out/
+/build/
+/dist/
 
-# production
-/build
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
-# misc
-.DS_Store
+# Testes & Cobertura
+/coverage
+*.lcov
+.nyc_output
+
+# Variáveis de Ambiente & Segredos
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.pem
+# Permite versionar o template de exemplo de variáveis
+!.env.example
 
-# debug
+# Logs & Depuração
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 .pnpm-debug.log*
+next-panic-*.log
 
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
+# Vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Editores & IDEs
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de Sistema Operacional (Windows / macOS / Linux)
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+*~
+*.tmp
+*.temp
